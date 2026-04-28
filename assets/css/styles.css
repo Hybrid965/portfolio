@@ -64,8 +64,8 @@ Hero
 .flex-column {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     padding: 60px;
+    justify-content: center;
 
 }
 
@@ -181,6 +181,75 @@ Hero
     padding: 10px;
     margin: 5px;
 }
+
+/*=========================================
+About 
+===========================================*/
+#about{
+    background-color: #070e1a;
+    border-top: 1px solid #1e3552;
+}
+
+.about-title{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    margin:10px 0px 30px 0px
+}
+
+.about-desc{
+    color: #8fa8c4;
+    margin-top: 15px;
+    font-size: 16px;
+    width: 400px;
+    line-height: 30px;
+    letter-spacing: 1.5;
+}
+
+.about-desc span{
+    color: white;
+}
+
+#core-skills{
+    color: #4db8ff;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 1px solid #4db8ff;
+    padding-bottom: 10px;
+    width: 400px;
+    
+}
+
+.skill{
+    color: #8fa8c4;
+    width: 200px;
+    list-style:circle;
+}
+
+ul.flex-row{
+    width: 100px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*=========================================
 Media Queries

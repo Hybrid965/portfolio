@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -192,19 +193,19 @@ Hero
 /*=========================================
 About 
 ===========================================*/
-#about{
+#about {
     background-color: #070e1a;
     border-top: 1px solid #1e3552;
 }
 
-.about-title{
+.about-title {
     color: white;
     font-size: 30px;
     font-weight: 800;
-    margin:10px 0px 30px 0px
+    margin: 10px 0px 30px 0px
 }
 
-.about-desc{
+.about-desc {
     color: #8fa8c4;
     margin-top: 15px;
     font-size: 16px;
@@ -213,11 +214,11 @@ About
     letter-spacing: 1.5;
 }
 
-.about-desc span{
+.about-desc span {
     color: white;
 }
 
-#core-skills{
+#core-skills {
     color: #4db8ff;
     margin-top: 90px;
     margin-bottom: 20px;
@@ -228,24 +229,89 @@ About
     padding-bottom: 10px;
     max-width: 400px;
     min-width: 300px;
-    
+
 }
 
-.skill{
+.skill {
     color: #8fa8c4;
     width: 200px;
-    list-style:circle;
+    list-style: circle;
 }
 
-ul.flex-row{
+ul.flex-row {
     width: 100px;
-    
+
 }
+
+/*=========================================
+Projects
+===========================================*/
+#projects {
+    background-color: #070e1a;
+    border-top: 1px solid #1e3552;
+    padding: 50px;
+}
+
+.projects-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-flex-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 2050px;
+
+}
+
+#projects h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 10px 0px 30px 0px
+}
+
+
+.projects-box {
+    border: 1px solid #1e3552;
+    background-color: #152540;
+    border-radius: 5%;
+    padding: 30px;
+}
+
+.projects-box p {
+    color: #8fa8c4;
+    letter-spacing: 1.5;
+    line-height: 25px;
+}
+
+.projects-box h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
 
 
 /*=========================================
 Media Queries
 ===========================================*/
+@media (max-width: 1250px) {
+    /* Projects */
+    .projects-flex-row {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media (max-width: 1000px) {
+    /* Projects */
+    .projects-flex-row {
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+
 @media (max-width: 768px) {
 
     /* Nav */
@@ -277,26 +343,36 @@ Media Queries
         width: 100%;
         gap: 20px;
     }
+
     /* About */
-    #about{
+    #about {
         display: flex;
         flex-direction: column;
     }
-    #core-skills{
+
+    #core-skills {
         margin-top: 0;
     }
-    .flex-column{
+
+    .flex-column {
         padding: 0;
         margin: 40px;
     }
-    .about-desc{
+
+    .about-desc {
         width: 100%;
         max-width: 100%;
         font-size: 14px;
     }
-    .skill{
+
+    .skill {
         font-size: 12px;
         width: 150px;
+    }
+
+    /* Projects */
+    .projects-flex-row {
+    grid-template-columns: 1fr;
     }
 
 

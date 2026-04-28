@@ -292,6 +292,105 @@ Projects
     margin-bottom: 10px;
 }
 
+/*=========================================
+Contact
+===========================================*/
+#contact {
+    background-color: #070e1a;
+    border-top: 1px solid #1e3552;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    text-align: center;
+    border: 1px solid #1e3552;
+    padding: 50px;
+    background-color: #152540;
+    border-radius: 10%;
+}
+#contact h2 {
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+    margin: 10px 0px 30px 0px
+}
+.contact-desc {
+    color: #8fa8c4;
+    letter-spacing: 1.5;
+    line-height: 25px;
+    margin-bottom: 30px;
+    
+}
+#linkedin-btn {
+    color: #4db8ff;
+    background-color: transparent;
+    border: #4db8ff 1px solid;
+    padding: 15px;
+    border-radius: 5%;
+    width: 150px;
+    margin-top: 30px;
+    transition: background 0.2s, transform 0.15s;
+}
+#linkedin-btn:hover {
+    transform: translateY(-2px);
+    animation-delay: 1;
+    cursor: pointer;
+}
+#email-btn {
+    color: white;
+    background-color: #4db8ff;
+    border: transparent;
+    padding: 15px;
+    border-radius: 5%;
+    width: 150px;
+    margin-top: 30px;
+    transition: background 0.2s, transform 0.15s;
+}
+#email-btn:hover {
+    transform: translateY(-2px);
+    animation-delay: 1;
+    cursor: pointer;
+}
+#github-btn {
+    color: #4db8ff;
+    background-color: transparent;
+    border: #4db8ff 1px solid;
+    padding: 15px;
+    border-radius: 5%;
+    width: 150px;
+    margin-top: 30px;
+    transition: background 0.2s, transform 0.15s;
+}
+#github-btn:hover {
+    transform: translateY(-2px);
+    animation-delay: 1;
+    cursor: pointer;
+}
+#contact-btn {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*=========================================
+Footer
+===========================================*/
+footer{
+    background-color: #070e1a;
+    border-top: 1px solid #1e3552;
+    padding: 20px;
+    color: #8fa8c4;
+
+}
+
 
 
 /*=========================================
@@ -375,6 +474,20 @@ Media Queries
     grid-template-columns: 1fr;
     }
 
+    /* Contact */
+    #contact {
+        padding: 30px 20px;
+    }
+
+    .contact-flex-column {
+        padding: 40px 30px;
+        border-radius: 5%;
+    }
+
+    #contact h2 {
+        font-size: 40px;
+    }
+
 
 }
 
@@ -424,5 +537,68 @@ Media Queries
     .tag {
         font-size: 11px;
         padding: 8px;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 20px 15px;
+    }
+
+    .contact-flex-column {
+        padding: 30px 20px;
+        border-radius: 5%;
+        width: 100%;
+    }
+
+    #contact h2 {
+        font-size: 32px;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .contact-desc {
+        font-size: 14px;
+    }
+
+    #contact-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #email-btn,
+    #linkedin-btn,
+    #github-btn {
+        width: 100%;
+        margin-top: 0;
+    }#contact {
+        padding: 20px 15px;
+    }
+
+    .contact-flex-column {
+        padding: 30px 20px;
+        border-radius: 5%;
+        width: 100%;
+    }
+
+    #contact h2 {
+        font-size: 32px;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .contact-desc {
+        font-size: 14px;
+    }
+
+    #contact-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #email-btn,
+    #linkedin-btn,
+    #github-btn {
+        width: 100%;
+        margin-top: 0;
     }
 }

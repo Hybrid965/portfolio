@@ -285,6 +285,25 @@ Media Queries
         width: 100%;
         gap: 20px;
     }
+    /* About */
+    #about{
+        display: flex;
+        flex-direction: column;
+    }
+    #core-skills{
+        margin-top: 0;
+    }
+    .flex-column{
+        padding: 0;
+        margin: 40px;
+    }
+    .about-desc{
+        width: 100%;
+        font-size: 14px;
+    }
+    .skill{
+        font-size: 12px;
+    }
 
 
 }

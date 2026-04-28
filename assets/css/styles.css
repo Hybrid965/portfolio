@@ -34,6 +34,11 @@ nav {
     padding: 25px 20px;
     background-color: #070e1a;
     border-bottom: 1px solid #1e3552;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #logo a {
@@ -66,6 +71,7 @@ Hero
     align-items: center;
     background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(77, 184, 255, 0.07) 0%, transparent 70%);
     background-color: #070e1a;
+    padding: 100px 0px 50px 0px;
 
 }
 

@@ -1,6 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /*=========================================
@@ -89,7 +96,7 @@ Hero
 }
 
 #hero-btn {
-    width: 400px;
+    max-width: 400px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -201,7 +208,7 @@ About
     color: #8fa8c4;
     margin-top: 15px;
     font-size: 16px;
-    width: 400px;
+    max-width: 400px;
     line-height: 30px;
     letter-spacing: 1.5;
 }
@@ -219,7 +226,8 @@ About
     font-size: 14px;
     border-bottom: 1px solid #4db8ff;
     padding-bottom: 10px;
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
     
 }
 
@@ -233,22 +241,6 @@ ul.flex-row{
     width: 100px;
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*=========================================
@@ -299,10 +291,12 @@ Media Queries
     }
     .about-desc{
         width: 100%;
+        max-width: 100%;
         font-size: 14px;
     }
     .skill{
         font-size: 12px;
+        width: 150px;
     }
 
 

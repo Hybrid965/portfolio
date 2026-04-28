@@ -85,6 +85,7 @@ Hero
 .hero-p {
     padding: 10px 0px 20px 0px;
     color: #8fa8c4;
+    line-height: 25px;
 }
 
 #hero-btn {
@@ -94,7 +95,7 @@ Hero
     gap: 40px;
     text-align: center;
     letter-spacing: 2px;
-    
+
 }
 
 #hero-btn a {
@@ -121,4 +122,149 @@ Hero
     color: #4db8ff;
     background-color: transparent;
     border: #4db8ff 1px solid;
+}
+
+#hero-border {
+    border: 1px solid #1e3552;
+    padding: 40px;
+    border-radius: 2%;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.flex-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hero-box {
+    color: white;
+    border: 1px solid #1e3552;
+    padding: 10px 20px 20px 20px;
+    background-color: #152540;
+    border-radius: 5%;
+
+
+}
+
+.hero-box h2 {
+    padding-bottom: 5px;
+    font-size: 42px;
+    color: #4db8ff;
+    letter-spacing: 2px;
+
+}
+
+.box-desc {
+    font-size: 10px;
+    color: #8fa8c4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tag-box {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: white;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px solid #2a6fa8;
+    background-color: rgba(77, 184, 255, 0.12);
+    color: #4db8ff;
+    border-radius: 10%;
+    font-size: 12px;
+    padding: 10px;
+    margin: 5px;
+}
+
+/*=========================================
+Media Queries
+===========================================*/
+@media (max-width: 768px) {
+
+    /* Nav */
+    #nav-links {
+        display: none;
+    }
+
+    /* Hero */
+    #hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .flex-column {
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .flex-column h1 {
+        font-size: 60px;
+    }
+
+    #hero-border {
+        display: none;
+    }
+
+    /* Hero buttons */
+    #hero-btn {
+        width: 100%;
+        gap: 20px;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+    /* Nav */
+    nav {
+        padding: 15px;
+    }
+
+    #logo a {
+        margin: 0;
+    }
+
+    /* Hero */
+    .flex-column h1 {
+        font-size: 42px;
+    }
+
+    .sub-title {
+        font-size: 12px;
+    }
+
+    .hero-p {
+        font-size: 14px;
+    }
+
+    /* Buttons */
+    #hero-btn {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #hero-btn a {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Tags */
+    .tag-box {
+        margin-top: 20px;
+    }
+
+    .tag {
+        font-size: 11px;
+        padding: 8px;
+    }
 }

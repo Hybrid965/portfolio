@@ -456,7 +456,7 @@ footer {
 /*=========================================
 Media Queries
 ===========================================*/
-@media (max-width: 1250px) {
+@media (max-width: 1500px) {
 
     /* Projects */
     .projects-flex-row {

@@ -22,6 +22,10 @@ Universal Classes
     font-family: 'Epilogue', sans-serif;
 }
 
+.nav-links.open {
+    right: 0;
+}
+
 /*=========================================
 Nav
 ===========================================*/
@@ -59,6 +63,31 @@ nav {
 
 #nav-links a:hover {
     color: #4db8ff;
+}
+
+/*=========================================
+Burger 
+===========================================*/
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 30px;
+    overflow: visible;
+}
+
+.burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #FAF7F2;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 /*=========================================
@@ -136,6 +165,8 @@ Hero
     color: #4db8ff;
     background-color: transparent;
     border: #4db8ff 1px solid;
+    display: flex;
+    align-items: center;
 }
 
 #hero-border {
@@ -321,19 +352,22 @@ Contact
     background-color: #152540;
     border-radius: 10%;
 }
+
 #contact h2 {
     color: white;
     font-size: 52px;
     font-weight: 800;
     margin: 10px 0px 30px 0px
 }
+
 .contact-desc {
     color: #8fa8c4;
     letter-spacing: 1.5;
     line-height: 25px;
     margin-bottom: 30px;
-    
+
 }
+
 #linkedin-btn {
     color: #4db8ff;
     background-color: transparent;
@@ -344,11 +378,13 @@ Contact
     margin-top: 30px;
     transition: background 0.2s, transform 0.15s;
 }
+
 #linkedin-btn:hover {
     transform: translateY(-2px);
     animation-delay: 1;
     cursor: pointer;
 }
+
 #email-btn {
     color: white;
     background-color: #4db8ff;
@@ -359,11 +395,13 @@ Contact
     margin-top: 30px;
     transition: background 0.2s, transform 0.15s;
 }
+
 #email-btn:hover {
     transform: translateY(-2px);
     animation-delay: 1;
     cursor: pointer;
 }
+
 #github-btn {
     color: #4db8ff;
     background-color: transparent;
@@ -374,11 +412,13 @@ Contact
     margin-top: 30px;
     transition: background 0.2s, transform 0.15s;
 }
+
 #github-btn:hover {
     transform: translateY(-2px);
     animation-delay: 1;
     cursor: pointer;
 }
+
 #contact-btn {
     display: flex;
     gap: 20px;
@@ -389,7 +429,7 @@ Contact
 /*=========================================
 Footer
 ===========================================*/
-footer{
+footer {
     background-color: #070e1a;
     border-top: 1px solid #1e3552;
     padding: 20px;
@@ -403,31 +443,73 @@ footer{
 Media Queries
 ===========================================*/
 @media (max-width: 1250px) {
+
     /* Projects */
     .projects-flex-row {
-    grid-template-columns: 1fr 1fr 1fr;
-}
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (max-width: 1000px) {
+
     /* Projects */
     .projects-flex-row {
-    grid-template-columns: 1fr 1fr;
-}
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
 @media (max-width: 768px) {
 
-    /* Nav */
-    #nav-links {
-        display: none;
+    /* Burger */
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #070e1a;
+        flex-direction: column;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        display: flex;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    #nav-links a {
+        display: block;
+        padding-top: 10px;
+        
+    }
+
+    /* Burger */
+    .burger {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+    }
+
+    .burger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #FAF7F2;
+        border-radius: 2px;
+        
     }
 
     /* Hero */
     #hero {
         flex-direction: column;
-        padding: 20px;
+        padding: 100px 20px 20px 20px;
     }
 
     .flex-column {
@@ -477,7 +559,7 @@ Media Queries
 
     /* Projects */
     .projects-flex-row {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
     /* Contact */
@@ -530,9 +612,11 @@ Media Queries
     }
 
     #hero-btn a {
-        width: 100%;
+        width: 200px;
         margin-top: 10px;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     /* Tags */
@@ -576,7 +660,9 @@ Media Queries
     #github-btn {
         width: 100%;
         margin-top: 0;
-    }#contact {
+    }
+
+    #contact {
         padding: 20px 15px;
     }
 

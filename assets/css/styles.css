@@ -26,6 +26,10 @@ Universal Classes
     right: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 /*=========================================
 Nav
 ===========================================*/
@@ -327,6 +331,13 @@ Projects
 .projects-box h3 {
     color: white;
     margin-bottom: 10px;
+}
+
+
+
+.projects-box:hover{
+    border: 3px solid #4db8ff;
+    cursor: pointer;
 }
 
 /*=========================================

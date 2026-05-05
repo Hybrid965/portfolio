@@ -382,18 +382,7 @@ Contact
 
 }
 
-#linkedin-btn {
-    color: #4db8ff;
-    background-color: transparent;
-    border: #4db8ff 1px solid;
-    padding: 15px;
-    border-radius: 5%;
-    width: 150px;
-    margin-top: 30px;
-    transition: background 0.2s, transform 0.15s;
-}
-
-#linkedin-btn:hover {
+.btn:hover {
     transform: translateY(-2px);
     animation-delay: 1;
     cursor: pointer;
@@ -416,7 +405,7 @@ Contact
     cursor: pointer;
 }
 
-#github-btn {
+.btn {
     color: #4db8ff;
     background-color: transparent;
     border: #4db8ff 1px solid;
@@ -670,8 +659,7 @@ Media Queries
     }
 
     #email-btn,
-    #linkedin-btn,
-    #github-btn {
+    .btn {
         width: 100%;
         margin-top: 0;
     }
@@ -702,8 +690,7 @@ Media Queries
     }
 
     #email-btn,
-    #linkedin-btn,
-    #github-btn {
+    .btn{
         width: 100%;
         margin-top: 0;
     }

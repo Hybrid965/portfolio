@@ -37,10 +37,9 @@ Nav
 ===========================================*/
 nav {
     display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 400px;
-    padding: 25px 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
     background-color: #070e1a;
     border-bottom: 1px solid #1e3552;
     position: fixed;
@@ -50,11 +49,11 @@ nav {
     right: 0;
 }
 
-#logo a {
-    color: white;
-    margin: 0px 20px;
-    font-weight: 800;
-    text-decoration: none;
+#nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 #nav-links a {
@@ -207,7 +206,8 @@ Projects
 
 /* ── Left: sticky intro panel ── */
 .projects-intro {
-    flex: 0 0 400px;
+    width:100%;
+    max-width: 400px;
     position: sticky;
     top: 80px;
 }
@@ -257,7 +257,7 @@ Projects
     transition: border-color 0.25s ease, transform 0.25s ease,
         box-shadow 0.25s ease;
     cursor: pointer;
-    
+
 }
 
 .project-box:hover {
@@ -312,6 +312,7 @@ Projects
     background: rgba(59, 111, 212, 0.06);
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
+    max-width: 1000px;
 }
 
 .project-featured:hover {
@@ -485,23 +486,51 @@ footer {
 }
 
 /*=========================================
-Media Queries
+Responsive
 ===========================================*/
-@media (max-width: 1500px) {
-    .projects-flex-row {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
 
-@media (max-width: 1000px) {
-    .projects-flex-row {
-        grid-template-columns: 1fr 1fr;
+@media (max-width: 1200px) {
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-intro {
+        width: 100%;
+        max-width: 100%;
+        position: static;
+    }
+
+    .projects-grid {
+        width: 100%;
+    }
+    #hero {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+        text-align: center;
+        padding-top: 180px;
+        
+    }
+    #hero h1{
+        font-size: 62px;
+    }
+    #hero p{
+        line-height: 30px;
+    }
+    .project-featured{
+        max-width: 800px;
     }
 }
 
 @media (max-width: 768px) {
 
-    /* Burger */
+    /* Nav */
+    nav {
+        justify-content: space-between;
+        gap: 0;
+    }
+
     .nav-links {
         position: fixed;
         top: 80px;
@@ -514,99 +543,54 @@ Media Queries
         transition: right 0.3s ease;
         z-index: 1000;
         display: flex;
+        padding: 30px;
     }
 
     .nav-links.open {
         right: 0;
     }
 
-    #nav-links a {
-        display: block;
-        padding-top: 10px;
-    }
-
     .burger {
         display: flex;
-        flex-direction: column;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        margin-left: auto;
-    }
-
-    .burger span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background-color: #FAF7F2;
-        border-radius: 2px;
     }
 
     /* Hero */
     #hero {
         flex-direction: column;
-        padding: 100px 20px 20px 20px;
+        padding: 120px 20px 40px;
+        text-align: center;
     }
 
     .flex-column {
-        padding: 30px 20px;
-        margin-top: 20px;
+        padding: 20px;
+        margin-bottom: 60px;
     }
 
     .flex-column h1 {
-        font-size: 60px;
+        font-size: 72px;
     }
 
-    #hero-border {
-        display: none;
+    /* Expertise */
+    .expertise-container {
+        grid-template-columns: 1fr;
     }
 
-    #hero-btn {
-        width: 100%;
-        gap: 20px;
-    }
-
-    /* About */
-    #about {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #core-skills {
-        margin-top: 0;
-    }
-
-    .flex-column {
-        padding: 0;
-        margin: 40px;
-    }
-
-    .about-desc {
-        width: 100%;
-        max-width: 100%;
-        font-size: 14px;
-    }
-
-    .skill {
-        font-size: 12px;
-        width: 150px;
+    .expertise-box:not(:last-child) {
+        border-right: none;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.15);
     }
 
     /* Projects */
     #projects {
-        flex-direction: column;
         padding: 60px 20px;
     }
 
-    .projects-intro {
-        position: static;
-        flex: none;
-        width: 100%;
+    .projects-intro h2 {
+        font-size: 52px;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .project-featured {
@@ -614,79 +598,62 @@ Media Queries
     }
 
     .project-featured .project-thumb {
-        flex: none;
         width: 100%;
-        aspect-ratio: 16 / 9;
     }
 
     /* Contact */
     #contact {
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
     .contact-flex-column {
-        padding: 40px 30px;
-        border-radius: 5%;
+        width: 100%;
+        padding: 40px 25px;
+        border-radius: 20px;
     }
 
     #contact h2 {
-        font-size: 40px;
+        font-size: 38px;
     }
 }
 
 @media (max-width: 480px) {
 
-    /* Nav */
-    nav {
-        padding: 15px;
-    }
-
-    #logo a {
-        margin: 0;
-    }
-
-    /* Hero */
     .flex-column h1 {
-        font-size: 42px;
+        font-size: 48px;
     }
 
     .sub-title {
         font-size: 12px;
+        letter-spacing: 3px;
     }
 
-    .hero-p {
-        font-size: 14px;
+    .projects-intro h2 {
+        font-size: 42px;
     }
 
-    /* Tags */
-    .tag-box {
-        margin-top: 20px;
+    .project-featured-info {
+        padding: 20px;
     }
 
-    .tag {
-        font-size: 11px;
-        padding: 8px;
+    .project-featured-info h3 {
+        font-size: 1.1rem;
     }
 
-    /* Projects */
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .project-featured-info p {
+        font-size: 0.78rem;
     }
 
-    /* Contact */
-    #contact {
-        padding: 20px 15px;
+    .project-tags {
+        gap: 6px;
     }
 
-    .contact-flex-column {
-        padding: 30px 20px;
-        border-radius: 5%;
-        width: 100%;
+    .project-tags .project-tag {
+        font-size: 0.6rem;
     }
 
     #contact h2 {
-        font-size: 32px;
-        margin: 10px 0px 20px 0px;
+        font-size: 30px;
     }
 
     .contact-desc {
@@ -695,13 +662,11 @@ Media Queries
 
     #contact-btn {
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        width: 100%;
     }
 
     #email-btn,
     .btn {
         width: 100%;
-        margin-top: 0;
     }
 }

@@ -206,8 +206,8 @@ Projects
 
 /* ── Left: sticky intro panel ── */
 .projects-intro {
-    width:100%;
-    max-width: 400px;
+    width: 100%;
+    min-width: 400px;
     position: sticky;
     top: 80px;
 }
@@ -277,9 +277,18 @@ Projects
 
 .project-label {
     padding: 12px 14px;
-    font-size: 0.82rem;
+    font-size: 1.25rem;
     letter-spacing: 0.04em;
     color: #d0daea;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+}
+
+.project-desc {
+    padding: 12px 14px;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #8a9ab5;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -312,7 +321,6 @@ Projects
     background: rgba(59, 111, 212, 0.06);
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
-    max-width: 1000px;
 }
 
 .project-featured:hover {
@@ -322,7 +330,6 @@ Projects
 
 .project-featured .project-thumb {
     flex: 0 0 55%;
-    aspect-ratio: 16 / 9;
     background: #1a2540;
 }
 
@@ -488,8 +495,7 @@ footer {
 /*=========================================
 Responsive
 ===========================================*/
-
-@media (max-width: 1200px) {
+@media (max-width: 1450px) {
 
     #projects {
         display: flex;
@@ -505,25 +511,28 @@ Responsive
     .projects-grid {
         width: 100%;
     }
+}
+
+@media (max-width: 1200px) {
+
     #hero {
         flex-direction: column;
         padding: 120px 20px 40px;
         text-align: center;
         padding-top: 180px;
-        
+
     }
-    #hero h1{
+
+    #hero h1 {
         font-size: 62px;
     }
-    #hero p{
+
+    #hero p {
         line-height: 30px;
-    }
-    .project-featured{
-        max-width: 800px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
     /* Nav */
     nav {

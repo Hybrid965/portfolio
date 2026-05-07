@@ -41,7 +41,7 @@ nav {
     display: flex;
     flex-direction: row;
     padding: 20px;
-    justify-content: space-between;
+    gap: 400px;
     padding: 25px 20px;
     background-color: #070e1a;
     border-bottom: 1px solid #1e3552;
@@ -62,10 +62,11 @@ nav {
 #nav-links a {
     margin: 0px 20px;
     text-decoration: none;
-    color: #8fa8c4;
+    color: white;
     text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 5px;
 }
 
 #nav-links a:hover {
@@ -108,6 +109,7 @@ Hero
     background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(77, 184, 255, 0.07) 0%, transparent 70%);
     background-color: #070e1a;
     padding: 100px 0px 50px 0px;
+    min-height: 90vh;
 
 }
 
@@ -116,49 +118,37 @@ Hero
     flex-direction: column;
     padding: 60px;
     justify-content: center;
+    margin-bottom: 200px;
 
 }
 
 .sub-title {
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    font-size: 14px;
-    color: #4db8ff;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 600;
 }
 
 .flex-column h1 {
-    font-size: 92px;
+    font-size: 150px;
     padding: 0px;
     color: white;
 }
 
-.hero-p {
-    padding: 10px 0px 20px 0px;
-    color: #8fa8c4;
-    line-height: 25px;
-}
-
-#hero-btn {
-    max-width: 400px;
+#hero-btn a{
+    color: white;
+    padding-top: 20px;
     display: flex;
-    flex-direction: row;
-    gap: 40px;
     text-align: center;
-    letter-spacing: 2px;
-
-}
-
-#hero-btn a {
-    padding: 15px;
-    border-radius: 5%;
-    width: 150px;
-    margin-top: 30px;
-    transition: background 0.2s, transform 0.15s;
+    justify-content: center;
 }
 
 #vmw-btn {
-    color: black;
-    background-color: #4db8ff;
+    color: white;
+    width: 1400px;
 }
 
 #vmw-btn:hover,
@@ -607,20 +597,6 @@ Media Queries
         font-size: 14px;
     }
 
-    /* Buttons */
-    #hero-btn {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    #hero-btn a {
-        width: 200px;
-        margin-top: 10px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
 
     /* Tags */
     .tag-box {

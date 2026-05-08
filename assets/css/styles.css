@@ -99,18 +99,21 @@ Hero
 ===========================================*/
 #hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(77, 184, 255, 0.07) 0%, transparent 70%);
     background-color: #070e1a;
-    padding: 300px 0px 50px 0px;
     min-height: 90vh;
+    gap: 40px;
 }
 
 .scroll-arrow {
-    display: block;
-    margin: 150px auto;
+    position: absolute;  
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 60px;
     animation: bounce 2s ease-in-out infinite;
@@ -122,11 +125,11 @@ Hero
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateX(-50%) translateY(0);
     }
 
     50% {
-        transform: translateY(8px);
+        transform: translateX(-50%) translateY(8px);
     }
 }
 
@@ -135,7 +138,7 @@ Hero
     flex-direction: column;
     padding: 60px;
     justify-content: center;
-    margin-bottom: 200px;
+    position: static;
 }
 
 .sub-title {
@@ -627,7 +630,7 @@ Experience
     padding-bottom: 60px;
     font-size: 72px;
     letter-spacing: -0.02em;
-    margin: 80px;
+    margin-top: 80px;
 }
 
 .experience-container {
@@ -826,7 +829,6 @@ Contact
     font-size: 0.82rem;
     letter-spacing: 0.04em;
     transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    margin-bottom: 100px;
 }
 
 .social-link:hover {
@@ -1017,9 +1019,12 @@ Responsive
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
+    #experience{
+        padding: 20px;
+    }
     #experience-title {
         font-size: 38px;
+        margin-top: 20px;
     }
 
     .experience-header {
@@ -1033,9 +1038,9 @@ Responsive
     .experience-date {
         display: none;
     }
-
     #contact-title {
         font-size: 38px;
+        margin-top: 20px;
     }
 
     .contact-email-btn {
@@ -1081,6 +1086,9 @@ Responsive
 
     .project-tags .project-tag {
         font-size: 0.6rem;
+    }
+    .experience-role {
+        font-size: 0.8rem;
     }
 
     #contact h2 {

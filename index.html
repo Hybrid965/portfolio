@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
@@ -35,6 +36,9 @@
             <div class="flex-column">
                 <h1 class="syne">Will Burkert</h1>
                 <p class="epilogue sub-title">Software Engineer, Front end & App Developer.</p>
+                <a href="#expertise">
+                    <i data-feather="arrow-down-circle" class="scroll-arrow"></i>
+                </a>
             </div>
         </section>
         <!-- Expertise -->
@@ -42,24 +46,59 @@
             <h2 class="syne" id="expertise-title">My Expertise</h2>
             <div class="expertise-container">
                 <div class="expertise-box">
-                    <h2 class="syne">Software Development</h2>
+                    <span class="expertise-number">01</span>
+                    <div class="expertise-icon" aria-hidden="true">
+                        <i data-feather="code"></i>
+                    </div>
+                    <h3 class="syne expertise-box-title">Software Development</h3>
+                    <div class="expertise-divider"></div>
                     <p class="epilogue">Building applications using Python, JavaScript, and TypeScript with a focus on
                         clean, maintainable code and solid OOP principles. Experience working on backend logic, APIs,
                         and automation.</p>
+                    <div class="expertise-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>APIs</span>
+                        <span>OOP</span>
+                    </div>
                 </div>
+
                 <div class="expertise-box">
-                    <h2 class="syne">Frontend Development</h2>
+                    <span class="expertise-number">02</span>
+                    <div class="expertise-icon" aria-hidden="true">
+                        <i data-feather="layout"></i>
+                    </div>
+                    <h3 class="syne expertise-box-title">Frontend Development</h3>
+                    <div class="expertise-divider"></div>
                     <p class="epilogue">Creating responsive and accessible interfaces using HTML, CSS, and JavaScript.
-                        <br>Focused on UI/UX,
-                        mobile-first design, and interactive web experiences.
-                    </p>
+                        Focused on UI/UX, mobile-first design, and interactive web experiences.</p>
+                    <div class="expertise-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>UI/UX</span>
+                        <span>Responsive</span>
+                    </div>
                 </div>
+
                 <div class="expertise-box">
-                    <h2 class="syne">Database Development</h2>
+                    <span class="expertise-number">03</span>
+                    <div class="expertise-icon" aria-hidden="true">
+                        <i data-feather="database"></i>
+                    </div>
+                    <h3 class="syne expertise-box-title">Database Development</h3>
+                    <div class="expertise-divider"></div>
                     <p class="epilogue">Working with SQL and NoSQL databases, including schema design, queries, and data
-                        optimisation. <br>
-                        Familiar with relational and document-based systems.</p>
+                        optimisation. Familiar with relational and document-based systems.</p>
+                    <div class="expertise-tags">
+                        <span>SQL</span>
+                        <span>NoSQL</span>
+                        <span>Schema Design</span>
+                        <span>Queries</span>
+                    </div>
                 </div>
+
             </div>
         </section>
         <!-- Projects -->
@@ -80,7 +119,8 @@
 
                 <!-- FEATURED (always first) -->
                 <div class="project-box project-featured">
-                    <img class="project-thumb" src="assets/images/skyline.png" alt="SkyLine Weather App Project Thumbnail">
+                    <img class="project-thumb" src="assets/images/skyline.png"
+                        alt="SkyLine Weather App Project Thumbnail">
                     <div class="project-featured-info">
                         <div>
                             <div class="project-featured-tag">⭐ Featured Project</div>
@@ -104,7 +144,8 @@
                 <div class="projects-grid">
                     <!-- Loyal Paws Art -->
                     <div class="project-box">
-                        <img class="project-thumb" src="assets/images/loyalpawsart.png" alt="Loyal Paws Art Project Thumbnail">
+                        <img class="project-thumb" src="assets/images/loyalpawsart.png"
+                            alt="Loyal Paws Art Project Thumbnail">
                         <div class="project-label">Loyal Paws Art</div>
                         <p class="epilogue project-desc">Loyal Paws Art is a creative digital art portfolio and
                             commission platform focused on
@@ -121,7 +162,8 @@
                     </div>
                     <!-- Cocker Spaniel -->
                     <div class="project-box">
-                        <img class="project-thumb" src="assets/images/thecockerspaniel.png" alt="Cocker Spaniel Project Thumbnail">
+                        <img class="project-thumb" src="assets/images/thecockerspaniel.png"
+                            alt="Cocker Spaniel Project Thumbnail">
                         <div class="project-label">The Cocker Spaniel</div>
                         <p class="epilogue project-desc">The Cocker Spaniel is a responsive web application designed to
                             showcase the breed's unique characteristics and care requirements. The project features a
@@ -154,6 +196,7 @@
         <p class="epilogue">© 2026 Hybrid Designs. All rights reserved.</p>
     </footer>
     <script src="assets/js/burger.js"></script>
+    <script src="assets/js/feather.js"></script>
 </body>
 
 </html>

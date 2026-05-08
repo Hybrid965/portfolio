@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 html,
 body {
     overflow-x: hidden;
@@ -897,11 +899,11 @@ Responsive
 
     /* Nav */
     nav {
-        justify-content: space-between;
+        justify-content: flex-end;
         gap: 0;
     }
 
-    .nav-links {
+    #nav-links {
         position: fixed;
         top: 80px;
         right: -100%;
@@ -914,9 +916,10 @@ Responsive
         z-index: 1000;
         display: flex;
         padding: 30px;
+        justify-content:flex-start;
     }
 
-    .nav-links.open {
+    #nav-links.open {
         right: 0;
     }
 

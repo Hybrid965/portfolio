@@ -890,6 +890,16 @@ Responsive
     #contact h2 {
         font-size: 38px;
     }
+
+    /* Experience */
+    #experience {
+        padding: 80px 20px;
+    }
+
+    #experience-title {
+        font-size: 52px;
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -906,6 +916,22 @@ Responsive
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    #experience-title {
+        font-size: 38px;
+    }
+
+    .experience-header {
+        padding: 20px 0;
+    }
+
+    .experience-role {
+        font-size: 1rem;
+    }
+
+    .experience-date {
+        display: none;
     }
 }
 

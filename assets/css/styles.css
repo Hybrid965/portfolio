@@ -401,6 +401,24 @@ Projects
     box-sizing: border-box;
 }
 
+.project-btn{
+    padding-top: 20px;
+}
+.view-project-featured{
+    color: #3a7be0;
+    
+}
+
+.view-project:hover{
+    color: white;
+}
+
+.view-project{
+    color: #3a7be0;
+    padding: 10px;
+    
+}
+
 /* ── Left: sticky intro panel ── */
 .projects-intro {
     width: 100%;
